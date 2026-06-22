@@ -1,27 +1,29 @@
-Papito website - definitief herstelde versie
+FIREBASE INSTELLEN VOOR ECHTE ONLINE OPSLAG
 
-Wat is aangepast:
-- Firebase-config opnieuw correct gezet in index.html en fotos.html.
-- JavaScript Firestore query-fouten hersteld.
-- Admin-login werkt via Firebase Authentication.
-- Bezoekers kunnen herinneringen en foto's uploaden, maar niet verwijderen.
-- Alleen admin kan goedkeuren, verwijderen, foto's downloaden en backup maken.
-- Query's zijn zo aangepast dat er geen samengestelde Firestore-index nodig is.
-- Oude lokale/backend-waarschuwing verwijderd.
-- Conflict/merge-problemen verwijderd.
+Deze website is technisch voorbereid voor:
+1. online condoleanceregister
+2. foto-upload
+3. goedkeuren/weigeren in admin
+4. kaarsjesteller
 
-Admin openen:
-https://spagencybe.github.io/Papito/?admin=1
+Stappen:
+1. Ga naar https://console.firebase.google.com/
+2. Maak een project, bijvoorbeeld Papito.
+3. Maak een Web App aan.
+4. Kopieer de firebaseConfig.
+5. Open index.html en fotos.html.
+6. Zoek:
+   const USE_FIREBASE = false;
+   Maak daarvan:
+   const USE_FIREBASE = true;
+7. Vul firebaseConfig in.
+8. Activeer Firestore Database.
+9. Activeer Storage.
+10. Publiceer opnieuw naar GitHub Pages.
 
-Admin gebruiker:
-carlos.van.nieuwenborgh@gmail.com
+Collecties:
+- memories
+- candles
 
 Let op:
-Het wachtwoord staat niet in de website. Dit beheer je in Firebase > Authentication > Users.
-
-Firebase vereist:
-1. Authentication > Sign-in method > Email/Password = Enabled
-2. Authentication > Users > gebruiker carlos.van.nieuwenborgh@gmail.com bestaat
-3. Firestore Rules vervangen door firestore.rules.txt
-4. Storage Rules vervangen door storage.rules.txt
-5. GitHub Pages cache verversen via Ctrl + F5 of ?v=4 achter de URL
+Voor echte beveiliging moet je Firebase Rules correct instellen.

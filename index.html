@@ -24,7 +24,7 @@ h2{margin:0 0 22px;font-weight:300;font-size:clamp(34px,5vw,54px);text-align:cen
 .formWrap{display:grid;grid-template-columns:1fr 1fr;gap:32px}label{display:block;margin:14px 0 7px;font-weight:700}
 input,textarea,select{width:100%;padding:14px 15px;border-radius:14px;border:1px solid #d2c3b2;background:#fffdf8;color:var(--ink);font:inherit}textarea{min-height:150px;resize:vertical}
 button.submit{margin-top:18px;background:var(--ink);color:white;border:0;border-radius:999px;padding:14px 22px;font-weight:700;cursor:pointer}.info{color:var(--muted);line-height:1.6}
-.wall{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:#fffdf8;border-radius:20px;padding:20px;border-left:5px solid var(--soft)}.card.pending{border-left-color:#9b6b2f}.card .meta{color:var(--muted);font-size:14px;margin:6px 0 12px}.card img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;margin-top:12px}
+.wall{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:#fffdf8;border-radius:20px;padding:20px;border-left:5px solid var(--soft)}.card .meta{color:var(--muted);font-size:14px;margin:6px 0 12px}.card img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;margin-top:12px}
 .adminActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.adminActions button{border:0;border-radius:999px;padding:9px 13px;cursor:pointer;background:#343137;color:white;font-weight:700}
 .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1000;align-items:center;justify-content:center;padding:24px}.lightbox.open{display:flex}.lightbox img{max-width:92vw;max-height:86vh;box-shadow:0 20px 60px rgba(0,0,0,.5)}.lbClose,.lbPrev,.lbNext{position:fixed;border:0;background:rgba(255,255,255,.9);color:#111;border-radius:999px;cursor:pointer;font-weight:900}.lbClose{right:22px;top:22px;font-size:24px;width:46px;height:46px}.lbPrev,.lbNext{top:50%;transform:translateY(-50%);font-size:30px;width:52px;height:52px}.lbPrev{left:22px}.lbNext{right:22px}
 footer{text-align:center;padding:42px 18px 80px;color:#5f5a55;font-size:18px}
@@ -41,7 +41,7 @@ footer{text-align:center;padding:42px 18px 80px;color:#5f5a55;font-size:18px}
 <section class="liveBox"><h2 data-es="Seguir la ceremonia en directo" data-nl="Uitvaartplechtigheid live volgen">Uitvaartplechtigheid live volgen</h2><p class="liveDate" data-es="Viernes 26 de junio de 2026 – 09:45 horas" data-nl="Vrijdag 26 juni 2026 – 09:45 uur">Vrijdag 26 juni 2026 – 09:45 uur</p><p class="story" data-es="Para familiares y amigos que no puedan estar presentes, la ceremonia se puede seguir en directo con el botón de abajo." data-nl="Voor familie en vrienden die niet aanwezig kunnen zijn, kan de plechtigheid live gevolgd worden via onderstaande knop.">Voor familie en vrienden die niet aanwezig kunnen zijn, kan de plechtigheid live gevolgd worden via onderstaande knop.</p><a class="liveBtn" data-es="🕯️ Abrir transmisión en vivo" data-nl="🕯️ Open livestream" href="https://rouwcentrumvandamme.livestream.fdesigner.eu/login/Carlos1948" rel="noopener" target="_blank">🕯️ Open livestream</a></section>
 <section><h2 data-es="Carlos Aránguiz" data-nl="Carlos Aránguiz">Carlos Aránguiz</h2><p class="story" data-es="Fue un hombre bueno, generoso y siempre dispuesto a ayudar a los demás. Su mayor felicidad era reunir a la familia alrededor de una mesa, compartiendo sus comidas, sus historias y su cariño incondicional. Para sus nietos era simplemente Papi." data-nl="Hij was een goede, genereuze man, altijd bereid anderen te helpen. Zijn grootste geluk was de familie rond de tafel samenbrengen, zijn maaltijden, zijn verhalen en zijn onvoorwaardelijke liefde delen. Voor zijn kleinkinderen was hij eenvoudigweg Papi.">Hij was een goede, genereuze man, altijd bereid anderen te helpen. Zijn grootste geluk was de familie rond de tafel samenbrengen, zijn maaltijden, zijn verhalen en zijn onvoorwaardelijke liefde delen. Voor zijn kleinkinderen was hij eenvoudigweg Papi.</p></section>
 <section><h2 data-es="Momentos" data-nl="Momenten">Momenten</h2><div class="gallery"><img alt="" class="big" data-lightbox="" src="assets/gallery/foto-001.jpg"/><img alt="" data-lightbox="" src="assets/gallery/foto-002.jpg"/><img alt="" data-lightbox="" src="assets/gallery/foto-003.jpg"/><img alt="" data-lightbox="" src="assets/gallery/foto-004.jpg"/><img alt="" class="big" data-lightbox="" src="assets/gallery/foto-005.jpg"/></div><p class="story" style="margin-top:26px"><a class="galleryBtn" data-es="Ver todas las fotos" data-nl="Bekijk alle foto’s" href="fotos.html">Bekijk alle foto’s</a></p></section>
-<section><h2 data-es="Deja un recuerdo" data-nl="Laat een herinnering achter">Laat een herinnering achter</h2><div class="formWrap"><form id="form"><label data-es="Nombre" data-nl="Naam">Naam</label><input name="name" required=""/><label data-es="Relación con Papi" data-nl="Relatie met Papi">Relatie met Papi</label><input name="relation"/><label data-es="Idioma" data-nl="Taal">Taal</label><select name="language"><option>Nederlands</option><option>Español</option></select><label data-es="Mensaje" data-nl="Tekst">Tekst</label><textarea name="text" required=""></textarea><label data-es="Añadir foto" data-nl="Foto toevoegen">Foto toevoegen</label><input accept="image/*" name="photo" type="file"/><button class="submit" data-es="Publicar recuerdo ❤️" data-nl="Plaats herinnering ❤️">Plaats herinnering ❤️</button></form><div class="info"><p data-es="Familia, amigos y conocidos pueden compartir aquí un mensaje o una foto." data-nl="Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen.">Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen.</p></div></div></section>
+<section><h2 data-es="Deja un recuerdo" data-nl="Laat een herinnering achter">Laat een herinnering achter</h2><div class="formWrap"><form id="form"><label data-es="Nombre" data-nl="Naam">Naam</label><input name="name" required=""/><label data-es="Relación con Papi" data-nl="Relatie met Papi">Relatie met Papi</label><input name="relation"/><label data-es="Idioma" data-nl="Taal">Taal</label><select name="language"><option>Nederlands</option><option>Español</option></select><label data-es="Mensaje" data-nl="Tekst">Tekst</label><textarea name="text" required=""></textarea><label data-es="Añadir foto" data-nl="Foto toevoegen">Foto toevoegen</label><input accept="image/*" name="photo" type="file"/><button class="submit" data-es="Publicar recuerdo ❤️" data-nl="Plaats herinnering ❤️">Plaats herinnering ❤️</button></form><div class="info"><p data-es="Familia, amigos y conocidos pueden compartir aquí un mensaje o una foto." data-nl="Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen.">Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen.</p><p data-es="Esta versión es local. Para subidas reales online, la web debe conectarse a Firebase o a un backend." data-nl="Deze versie is lokaal. Voor echte online uploads moet de website gekoppeld worden aan Firebase of een backend.">Deze versie is lokaal. Voor echte online uploads moet de website gekoppeld worden aan Firebase of een backend.</p></div></div></section>
 <section><h2 data-es="Muro de recuerdos" data-nl="Herinneringenmuur">Herinneringenmuur</h2><div class="wall" id="wall"></div></section>
 <section id="adminPanel" style="display:none"><h2>Verborgen admin</h2><p class="info">Hier kan je herinneringen verwijderen, foto’s apart downloaden en een backup exporteren.</p><button class="submit" onclick="downloadAllData()" type="button">Backup downloaden</button> <button class="submit" onclick="clearAllMemories()" type="button">Alle herinneringen verwijderen</button> <button class="submit" onclick="exitAdmin()" type="button">Admin sluiten</button></section>
 </main><footer><p>Hasta siempre, Papi ❤️</p><p data-es="Cuatro lugares, una historia, un corazón, una familia." data-nl="Vier plaatsen, één verhaal, één hart, één familie.">Vier plaatsen, één verhaal, één hart, één familie.</p></footer>
@@ -64,29 +64,14 @@ const firebaseConfig = {
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs,
-  doc,
-  updateDoc,
-  deleteDoc,
-  serverTimestamp,
-  query,
-  where
+  getFirestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc,
+  serverTimestamp, query, where
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import {
-  getStorage,
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  deleteObject
+  getStorage, ref, uploadBytes, getDownloadURL, deleteObject
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 import {
-  getAuth,
-  signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged
+  getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const app = initializeApp(firebaseConfig);
@@ -100,48 +85,32 @@ let galleryIndex = 0;
 
 function $(id) { return document.getElementById(id); }
 
-function esc(value) {
-  return String(value || "").replace(/[&<>"']/g, (char) => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    "\"": "&quot;",
-    "'": "&#039;"
-  }[char]));
+window.setLang = function(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  const nl = $("nl");
+  const es = $("es");
+  if (nl) nl.classList.toggle("active", lang === "nl");
+  if (es) es.classList.toggle("active", lang === "es");
+  document.querySelectorAll("[data-nl]").forEach(el => {
+    el.textContent = el.dataset[lang] || el.dataset.nl || "";
+  });
+  localStorage.setItem("site_lang", lang);
+};
+
+function esc(s) {
+  return String(s || "").replace(/[&<>"']/g, m => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[m]));
 }
 
 function isAdmin() {
   return !!auth.currentUser;
 }
 
-function sortByCreatedAtDesc(items) {
-  return items.sort((a, b) => {
-    const av = a.createdAt && typeof a.createdAt.seconds === "number" ? a.createdAt.seconds : 0;
-    const bv = b.createdAt && typeof b.createdAt.seconds === "number" ? b.createdAt.seconds : 0;
-    return bv - av;
-  });
-}
-
-window.setLang = function(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang;
-
-  const nl = $("nl");
-  const es = $("es");
-  if (nl) nl.classList.toggle("active", lang === "nl");
-  if (es) es.classList.toggle("active", lang === "es");
-
-  document.querySelectorAll("[data-nl]").forEach((el) => {
-    el.textContent = el.dataset[lang] || el.dataset.nl || "";
-  });
-
-  localStorage.setItem("site_lang", lang);
-};
-
 window.enterAdmin = async function() {
   const email = prompt(currentLang === "nl" ? "Admin e-mail:" : "Correo admin:", ADMIN_EMAIL_DEFAULT);
   if (!email) return;
-
   const password = prompt(currentLang === "nl" ? "Admin wachtwoord:" : "Contraseña admin:");
   if (!password) return;
 
@@ -151,7 +120,7 @@ window.enterAdmin = async function() {
     if (panel) panel.style.display = "block";
     await loadMemories();
   } catch (error) {
-    console.error("Admin login error:", error);
+    console.error(error);
     alert((currentLang === "nl" ? "Admin login mislukt: " : "Error de inicio de sesión admin: ") + (error.code || error.message));
   }
 };
@@ -165,14 +134,11 @@ window.exitAdmin = async function() {
 
 async function uploadPhoto(file) {
   if (!file) return { url: "", path: "" };
-
   const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
   const storagePath = `memories/${Date.now()}-${safeName}`;
   const fileRef = ref(storage, storagePath);
-
   await uploadBytes(fileRef, file);
   const url = await getDownloadURL(fileRef);
-
   return { url, path: storagePath };
 }
 
@@ -200,34 +166,30 @@ async function sendEmailNotification(data) {
   }
 }
 
-async function getMemoryItems() {
-  let q;
-
-  if (isAdmin()) {
-    q = query(collection(db, "memories"));
-  } else {
-    q = query(collection(db, "memories"), where("approved", "==", true));
-  }
-
-  const snap = await getDocs(q);
-  return sortByCreatedAtDesc(snap.docs.map((documentSnapshot) => ({
-    id: documentSnapshot.id,
-    ...documentSnapshot.data()
-  })));
-}
-
-window.loadMemories = async function() {
+async function loadMemories() {
   const wall = $("wall");
   if (!wall) return;
 
   wall.innerHTML = `<div class="card"><strong>${currentLang === "nl" ? "Laden..." : "Cargando..."}</strong></div>`;
 
-  let items = [];
+  let q;
+  if (isAdmin()) {
+    q = collection(db, "memories");
+  } else {
+    q = query(collection(db, "memories"), where("approved", "==", true));
+  }
 
+  let items = [];
   try {
-    items = await getMemoryItems();
+    const snap = await getDocs(q);
+    items = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    items.sort((a, b) => {
+      const ta = a.createdAt && a.createdAt.seconds ? a.createdAt.seconds : 0;
+      const tb = b.createdAt && b.createdAt.seconds ? b.createdAt.seconds : 0;
+      return tb - ta;
+    });
   } catch (error) {
-    console.error("Firebase read error:", error);
+    console.error(error);
     wall.innerHTML = `<div class="card"><strong>Firebase fout</strong><p>${esc(error.code || error.message)}</p></div>`;
     return;
   }
@@ -252,239 +214,166 @@ window.loadMemories = async function() {
   ];
 
   wall.innerHTML = "";
-
-  [...items, ...starters].forEach((memory, index) => {
-    const card = document.createElement("div");
-    card.className = "card" + (!memory.approved && memory.id ? " pending" : "");
-
-    const pendingText = (!memory.approved && memory.id)
+  [...items, ...starters].forEach((m, i) => {
+    const div = document.createElement("div");
+    div.className = "card" + (!m.approved && m.id ? " pending" : "");
+    const pending = (!m.approved && m.id)
       ? (currentLang === "nl" ? " · Wacht op goedkeuring" : " · Pendiente de aprobación")
       : "";
 
-    card.innerHTML = `
-      <strong>${esc(memory.name)}</strong>
-      <div class="meta">${esc(memory.relation)} · ${esc(memory.language)} · ${esc(memory.date)}${pendingText}</div>
-      <p>${esc(memory.text).replace(/
-/g, "<br>")}</p>
-      ${memory.photo ? `<img src="${memory.photo}" alt="">` : ""}
-      ${isAdmin() && memory.id ? `
+    div.innerHTML = `
+      <strong>${esc(m.name)}</strong>
+      <div class="meta">${esc(m.relation)} · ${esc(m.language)} · ${esc(m.date)}${pending}</div>
+      <p>${esc(m.text).replace(/\n/g, "<br>")}</p>
+      ${m.photo ? `<img src="${m.photo}" alt="">` : ""}
+      ${isAdmin() && m.id ? `
         <div class="adminActions">
-          ${!memory.approved ? `<button class="approve" onclick="approveMemory('${memory.id}')">Goedkeuren</button>` : ""}
-          ${memory.photo ? `<button onclick="downloadPhoto('${memory.photo}', ${index})">Foto downloaden</button>` : ""}
-          <button class="reject" onclick="deleteMemory('${memory.id}', '${memory.storagePath || ""}')">Verwijderen</button>
+          ${!m.approved ? `<button class="approve" onclick="approveMemory('${m.id}')">Goedkeuren</button>` : ""}
+          ${m.photo ? `<button onclick="downloadPhoto('${m.photo}', ${i})">Foto downloaden</button>` : ""}
+          <button class="reject" onclick="deleteMemory('${m.id}', '${m.storagePath || ""}')">Verwijderen</button>
         </div>
       ` : ""}
     `;
-
-    wall.appendChild(card);
+    wall.appendChild(div);
   });
-};
+}
 
 window.approveMemory = async function(id) {
   if (!isAdmin()) return alert("Admin login nodig.");
-
-  try {
-    await updateDoc(doc(db, "memories", id), { approved: true });
-    await loadMemories();
-  } catch (error) {
-    console.error("Approve error:", error);
-    alert("Kon niet goedkeuren: " + (error.code || error.message));
-  }
+  await updateDoc(doc(db, "memories", id), { approved: true });
+  await loadMemories();
 };
 
 window.deleteMemory = async function(id, storagePath) {
   if (!isAdmin()) return alert("Admin login nodig.");
-
   if (!confirm(currentLang === "nl" ? "Deze herinnering verwijderen?" : "¿Eliminar este recuerdo?")) return;
 
-  try {
-    await deleteDoc(doc(db, "memories", id));
+  await deleteDoc(doc(db, "memories", id));
 
-    if (storagePath) {
-      try {
-        await deleteObject(ref(storage, storagePath));
-      } catch (storageError) {
-        console.warn("Foto kon niet verwijderd worden:", storageError);
-      }
+  if (storagePath) {
+    try {
+      await deleteObject(ref(storage, storagePath));
+    } catch (error) {
+      console.warn("Foto kon niet verwijderd worden:", error);
     }
-
-    await loadMemories();
-  } catch (error) {
-    console.error("Delete error:", error);
-    alert("Kon niet verwijderen: " + (error.code || error.message));
   }
+
+  await loadMemories();
 };
 
-window.clearAllMemories = async function() {
+window.downloadPhoto = function(url, i) {
   if (!isAdmin()) return alert("Admin login nodig.");
-
-  if (!confirm("Alle herinneringen verwijderen? Dit kan niet ongedaan gemaakt worden.")) return;
-
-  try {
-    const snap = await getDocs(collection(db, "memories"));
-
-    for (const documentSnapshot of snap.docs) {
-      const data = documentSnapshot.data();
-
-      await deleteDoc(doc(db, "memories", documentSnapshot.id));
-
-      if (data.storagePath) {
-        try {
-          await deleteObject(ref(storage, data.storagePath));
-        } catch (storageError) {
-          console.warn("Foto kon niet verwijderd worden:", storageError);
-        }
-      }
-    }
-
-    await loadMemories();
-  } catch (error) {
-    console.error("Clear all error:", error);
-    alert("Kon niet alles verwijderen: " + (error.code || error.message));
-  }
-};
-
-window.downloadPhoto = function(url, index) {
-  if (!isAdmin()) return alert("Admin login nodig.");
-
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = `foto-herinnering-papi-${index + 1}.jpg`;
-  link.target = "_blank";
-  link.click();
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `foto-herinnering-papi-${i + 1}.jpg`;
+  a.target = "_blank";
+  a.click();
 };
 
 window.downloadAllData = async function() {
   if (!isAdmin()) return alert("Admin login nodig.");
-
-  try {
-    const items = await getMemoryItems();
-    const blob = new Blob([JSON.stringify(items, null, 2)], { type: "application/json" });
-
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "papito-herinneringen-backup.json";
-    link.click();
-
-    URL.revokeObjectURL(link.href);
-  } catch (error) {
-    console.error("Backup error:", error);
-    alert("Kon backup niet downloaden: " + (error.code || error.message));
-  }
+  const snap = await getDocs(collection(db, "memories"));
+  const data = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "papito-herinneringen-backup.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
 };
 
-function setupMemoryForm() {
-  const form = $("form");
-  if (!form) return;
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const submitButton = form.querySelector("button[type='submit'], .submit");
-    const oldText = submitButton ? submitButton.textContent : "";
-
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = currentLang === "nl" ? "Bezig met verzenden..." : "Enviando...";
+const form = $("form");
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const btn = f.querySelector("button[type='submit'], .submit");
+    const oldText = btn ? btn.textContent : "";
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = currentLang === "nl" ? "Bezig met verzenden..." : "Enviando...";
     }
 
     try {
-      const photoObject = await uploadPhoto(form.photo?.files?.[0]);
-
+      const photoObj = await uploadPhoto(f.photo?.files?.[0]);
       const memoryData = {
-        name: form.name.value.trim(),
-        relation: form.relation.value.trim(),
-        language: form.language.value,
-        text: form.text.value.trim(),
-        photo: photoObject.url,
-        storagePath: photoObject.path,
+        name: f.name.value.trim(),
+        relation: f.relation.value.trim(),
+        language: f.language.value,
+        text: f.text.value.trim(),
+        photo: photoObj.url,
+        storagePath: photoObj.path,
         approved: false,
         date: new Date().toLocaleDateString(currentLang === "nl" ? "nl-BE" : "es-ES"),
         createdAt: serverTimestamp()
       };
-
       await addDoc(collection(db, "memories"), memoryData);
       await sendEmailNotification(memoryData);
-
-      form.reset();
-
+      f.reset();
       alert(currentLang === "nl"
         ? "Bedankt. Je herinnering verschijnt na goedkeuring."
         : "Gracias. Tu recuerdo aparecerá después de la aprobación.");
-
       await loadMemories();
-    } catch (error) {
-      console.error("Submit error:", error);
-      alert((currentLang === "nl" ? "Er ging iets mis: " : "Algo salió mal: ") + (error.code || error.message));
+    } catch (err) {
+      console.error(err);
+      alert(currentLang === "nl"
+        ? "Er ging iets mis. Probeer opnieuw."
+        : "Algo salió mal. Inténtalo de nuevo.");
     } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = oldText;
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = oldText;
       }
     }
   });
 }
 
-function setupLightbox() {
-  galleryImages = [...document.querySelectorAll("[data-lightbox]")].map((image) => image.src);
-
-  document.querySelectorAll("[data-lightbox]").forEach((image, index) => {
-    image.addEventListener("click", () => {
-      galleryIndex = index;
-      const lightboxImage = $("lbImg");
-      const lightbox = $("lightbox");
-
-      if (lightboxImage && lightbox) {
-        lightboxImage.src = galleryImages[galleryIndex];
-        lightbox.classList.add("open");
-      }
-    });
-  });
-}
-
 window.closeLb = function() {
-  const lightbox = $("lightbox");
-  if (lightbox) lightbox.classList.remove("open");
+  const lb = $("lightbox");
+  if (lb) lb.classList.remove("open");
 };
 
 window.nextLb = function() {
   if (!galleryImages.length) return;
-
   galleryIndex = (galleryIndex + 1) % galleryImages.length;
-  const lightboxImage = $("lbImg");
-
-  if (lightboxImage) lightboxImage.src = galleryImages[galleryIndex];
+  $("lbImg").src = galleryImages[galleryIndex];
 };
 
 window.prevLb = function() {
   if (!galleryImages.length) return;
-
   galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
-  const lightboxImage = $("lbImg");
-
-  if (lightboxImage) lightboxImage.src = galleryImages[galleryIndex];
+  $("lbImg").src = galleryImages[galleryIndex];
 };
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeLb();
-  if (event.key === "ArrowRight") nextLb();
-  if (event.key === "ArrowLeft") prevLb();
-  if (event.ctrlKey && event.altKey && event.key.toLowerCase() === "p") enterAdmin();
+function setupLightbox() {
+  galleryImages = [...document.querySelectorAll("[data-lightbox]")].map(img => img.src);
+  document.querySelectorAll("[data-lightbox]").forEach((img, i) => {
+    img.addEventListener("click", () => {
+      galleryIndex = i;
+      $("lbImg").src = galleryImages[galleryIndex];
+      $("lightbox").classList.add("open");
+    });
+  });
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeLb();
+  if (e.key === "ArrowRight") nextLb();
+  if (e.key === "ArrowLeft") prevLb();
+  if (e.ctrlKey && e.altKey && e.key.toLowerCase() === "p") enterAdmin();
 });
 
 onAuthStateChanged(auth, async () => {
   const panel = $("adminPanel");
   if (panel) panel.style.display = isAdmin() ? "block" : "none";
-
   await loadMemories();
 });
 
 setLang(currentLang);
 setupLightbox();
-setupMemoryForm();
 
-if (new URLSearchParams(location.search).get("admin") === "1") {
-  setTimeout(enterAdmin, 300);
+if (new URLSearchParams(location.search).get("admin") === "1" || location.hash === "#admin") {
+  setTimeout(enterAdmin, 600);
 }
 </script>
 </body></html>
