@@ -1,9 +1,17 @@
 rules_version = '2';
+
 service firebase.storage {
   match /b/{bucket}/o {
+
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email == "carlos.van.nieuwenborgh@gmail.com";
+    }
+
     match /memories/{allPaths=**} {
       allow read: if true;
-      allow write: if true; // Voor publieke uploads. Later beperken met Auth/App Check.
+      allow create: if true;
+      allow update, delete: if isAdmin();
     }
   }
 }
