@@ -1,0 +1,1 @@
+Deze versie bevat de correcte Firebase-config en herstelde Firestore-querys. Als admin-login nog auth/api-key-not-valid geeft, is de API-key in Google Cloud/Firebase geblokkeerd of ongeldig en moet in Firebase/Google Cloud een nieuwe Web API key worden aangemaakt.

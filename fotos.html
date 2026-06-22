@@ -178,14 +178,10 @@ async function loadMemories() {
   try {
     const snap = await getDocs(q);
     items = snap.docs.map(d => ({ id: d.id, ...d.data() }));
-    items.sort((a, b) => {
-      const ta = a.createdAt && a.createdAt.seconds ? a.createdAt.seconds : 0;
-      const tb = b.createdAt && b.createdAt.seconds ? b.createdAt.seconds : 0;
-      return tb - ta;
-    });
+    items.sort((a,b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
   } catch (error) {
     console.error(error);
-    wall.innerHTML = `<div class="card"><strong>Firebase fout</strong><p>${esc(error.code || error.message)}</p></div>`;
+    wall.innerHTML = `<div class="card"><strong>Firebase fout</strong><p>${esc(error.message)}</p></div>`;
     return;
   }
 
@@ -367,8 +363,8 @@ onAuthStateChanged(auth, async () => {
 setLang(currentLang);
 setupLightbox();
 
-if (new URLSearchParams(location.search).get("admin") === "1" || location.hash === "#admin") {
-  setTimeout(enterAdmin, 600);
+if (new URLSearchParams(location.search).get("admin") === "1") {
+  setTimeout(enterAdmin, 300);
 }
 </script>
 </body></html>

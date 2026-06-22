@@ -41,7 +41,7 @@ footer{text-align:center;padding:42px 18px 80px;color:#5f5a55;font-size:18px}
 <section class="liveBox"><h2 data-es="Seguir la ceremonia en directo" data-nl="Uitvaartplechtigheid live volgen">Uitvaartplechtigheid live volgen</h2><p class="liveDate" data-es="Viernes 26 de junio de 2026 – 09:45 horas" data-nl="Vrijdag 26 juni 2026 – 09:45 uur">Vrijdag 26 juni 2026 – 09:45 uur</p><p class="story" data-es="Para familiares y amigos que no puedan estar presentes, la ceremonia se puede seguir en directo con el botón de abajo." data-nl="Voor familie en vrienden die niet aanwezig kunnen zijn, kan de plechtigheid live gevolgd worden via onderstaande knop.">Voor familie en vrienden die niet aanwezig kunnen zijn, kan de plechtigheid live gevolgd worden via onderstaande knop.</p><a class="liveBtn" data-es="🕯️ Abrir transmisión en vivo" data-nl="🕯️ Open livestream" href="https://rouwcentrumvandamme.livestream.fdesigner.eu/login/Carlos1948" rel="noopener" target="_blank">🕯️ Open livestream</a></section>
 <section><h2 data-es="Carlos Aránguiz" data-nl="Carlos Aránguiz">Carlos Aránguiz</h2><p class="story" data-es="Fue un hombre bueno, generoso y siempre dispuesto a ayudar a los demás. Su mayor felicidad era reunir a la familia alrededor de una mesa, compartiendo sus comidas, sus historias y su cariño incondicional. Para sus nietos era simplemente Papi." data-nl="Hij was een goede, genereuze man, altijd bereid anderen te helpen. Zijn grootste geluk was de familie rond de tafel samenbrengen, zijn maaltijden, zijn verhalen en zijn onvoorwaardelijke liefde delen. Voor zijn kleinkinderen was hij eenvoudigweg Papi.">Hij was een goede, genereuze man, altijd bereid anderen te helpen. Zijn grootste geluk was de familie rond de tafel samenbrengen, zijn maaltijden, zijn verhalen en zijn onvoorwaardelijke liefde delen. Voor zijn kleinkinderen was hij eenvoudigweg Papi.</p></section>
 <section><h2 data-es="Momentos" data-nl="Momenten">Momenten</h2><div class="gallery"><img alt="" class="big" data-lightbox="" src="assets/gallery/foto-001.jpg"/><img alt="" data-lightbox="" src="assets/gallery/foto-002.jpg"/><img alt="" data-lightbox="" src="assets/gallery/foto-003.jpg"/><img alt="" data-lightbox="" src="assets/gallery/foto-004.jpg"/><img alt="" class="big" data-lightbox="" src="assets/gallery/foto-005.jpg"/></div><p class="story" style="margin-top:26px"><a class="galleryBtn" data-es="Ver todas las fotos" data-nl="Bekijk alle foto’s" href="fotos.html">Bekijk alle foto’s</a></p></section>
-<section><h2 data-es="Deja un recuerdo" data-nl="Laat een herinnering achter">Laat een herinnering achter</h2><div class="formWrap"><form id="form"><label data-es="Nombre" data-nl="Naam">Naam</label><input name="name" required=""/><label data-es="Relación con Papi" data-nl="Relatie met Papi">Relatie met Papi</label><input name="relation"/><label data-es="Idioma" data-nl="Taal">Taal</label><select name="language"><option>Nederlands</option><option>Español</option></select><label data-es="Mensaje" data-nl="Tekst">Tekst</label><textarea name="text" required=""></textarea><label data-es="Añadir foto" data-nl="Foto toevoegen">Foto toevoegen</label><input accept="image/*" name="photo" type="file"/><button class="submit" data-es="Publicar recuerdo ❤️" data-nl="Plaats herinnering ❤️">Plaats herinnering ❤️</button></form><div class="info"><p data-es="Familia, amigos y conocidos pueden compartir aquí un mensaje o una foto." data-nl="Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen.">Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen.</p><p data-es="Esta versión es local. Para subidas reales online, la web debe conectarse a Firebase o a un backend." data-nl="Deze versie is lokaal. Voor echte online uploads moet de website gekoppeld worden aan Firebase of een backend.">Deze versie is lokaal. Voor echte online uploads moet de website gekoppeld worden aan Firebase of een backend.</p></div></div></section>
+<section><h2 data-es="Deja un recuerdo" data-nl="Laat een herinnering achter">Laat een herinnering achter</h2><div class="formWrap"><form id="form"><label data-es="Nombre" data-nl="Naam">Naam</label><input name="name" required=""/><label data-es="Relación con Papi" data-nl="Relatie met Papi">Relatie met Papi</label><input name="relation"/><label data-es="Idioma" data-nl="Taal">Taal</label><select name="language"><option>Nederlands</option><option>Español</option></select><label data-es="Mensaje" data-nl="Tekst">Tekst</label><textarea name="text" required=""></textarea><label data-es="Añadir foto" data-nl="Foto toevoegen">Foto toevoegen</label><input accept="image/*" name="photo" type="file"/><button class="submit" data-es="Publicar recuerdo ❤️" data-nl="Plaats herinnering ❤️">Plaats herinnering ❤️</button></form><div class="info"><p data-es="Familia, amigos y conocidos pueden compartir aquí un mensaje o una foto." data-nl="Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen.">Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen.</p></div></div></section>
 <section><h2 data-es="Muro de recuerdos" data-nl="Herinneringenmuur">Herinneringenmuur</h2><div class="wall" id="wall"></div></section>
 <section id="adminPanel" style="display:none"><h2>Verborgen admin</h2><p class="info">Hier kan je herinneringen verwijderen, foto’s apart downloaden en een backup exporteren.</p><button class="submit" onclick="downloadAllData()" type="button">Backup downloaden</button> <button class="submit" onclick="clearAllMemories()" type="button">Alle herinneringen verwijderen</button> <button class="submit" onclick="exitAdmin()" type="button">Admin sluiten</button></section>
 </main><footer><p>Hasta siempre, Papi ❤️</p><p data-es="Cuatro lugares, una historia, un corazón, una familia." data-nl="Vier plaatsen, één verhaal, één hart, één familie.">Vier plaatsen, één verhaal, één hart, één familie.</p></footer>
@@ -183,14 +183,10 @@ async function loadMemories() {
   try {
     const snap = await getDocs(q);
     items = snap.docs.map(d => ({ id: d.id, ...d.data() }));
-    items.sort((a, b) => {
-      const ta = a.createdAt && a.createdAt.seconds ? a.createdAt.seconds : 0;
-      const tb = b.createdAt && b.createdAt.seconds ? b.createdAt.seconds : 0;
-      return tb - ta;
-    });
+    items.sort((a,b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
   } catch (error) {
     console.error(error);
-    wall.innerHTML = `<div class="card"><strong>Firebase fout</strong><p>${esc(error.code || error.message)}</p></div>`;
+    wall.innerHTML = `<div class="card"><strong>Firebase fout</strong><p>${esc(error.message)}</p></div>`;
     return;
   }
 
@@ -372,8 +368,8 @@ onAuthStateChanged(auth, async () => {
 setLang(currentLang);
 setupLightbox();
 
-if (new URLSearchParams(location.search).get("admin") === "1" || location.hash === "#admin") {
-  setTimeout(enterAdmin, 600);
+if (new URLSearchParams(location.search).get("admin") === "1") {
+  setTimeout(enterAdmin, 300);
 }
 </script>
 </body></html>
