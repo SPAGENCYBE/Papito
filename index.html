@@ -281,6 +281,33 @@ window.downloadAllData = async function() {
   URL.revokeObjectURL(a.href);
 };
 
+
+async function sendEmailNotification(data) {
+  try {
+    await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        service_id: "service_x1wh7b8",
+        template_id: "template_a1becoi",
+        user_id: "GZ26ksQVkIaUV3FMg",
+        template_params: {
+          from_name: data.name || "",
+          relation: data.relation || "",
+          message: data.text || "",
+          language: data.language || "",
+          date: data.date || "",
+          photo_url: data.photo || "Geen foto toegevoegd"
+        }
+      })
+    });
+  } catch (error) {
+    console.warn("EmailJS melding niet verstuurd:", error);
+  }
+}
+
 const form = $("form");
 if (form) {
   form.addEventListener("submit", async (e) => {
@@ -294,7 +321,11 @@ if (form) {
     }
 
     try {
+<<<<<<< HEAD
       const photoObj = await uploadPhoto(f.photo?.files?.[0]);
+=======
+      const photo = await uploadPhoto(f.photo?.files?.[0]);
+>>>>>>> 7b651007c95b418f4505db64814f8280da2c8154
       const memoryData = {
         name: f.name.value.trim(),
         relation: f.relation.value.trim(),
