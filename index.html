@@ -9,7 +9,8 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg)}
 body:before{content:"";position:fixed;inset:0;background:url("assets/texture.png") center/cover no-repeat;opacity:.08;pointer-events:none}
-.lang{position:fixed;right:18px;top:18px;z-index:20;background:rgba(255,247,237,.9);border:1px solid #d5c7b8;border-radius:999px;padding:6px;box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.lang{position:fixed;right:18px;top:18px;z-index:20;background:rgba(255,247,237,.9);border:1px solid #d5c7b8;border-radius:999px;padding:6px;box-shadow:0 8px 25px rgba(0,0,0,.08);display:flex;gap:6px;align-items:center}
+.flags{font-size:18px;padding:0 6px}
 .lang button{border:0;background:transparent;padding:9px 13px;border-radius:999px;font-weight:700;cursor:pointer}.lang button.active{background:var(--ink);color:white}
 .liveFixed{position:fixed;left:18px;bottom:18px;z-index:30;background:var(--accent);color:#fff;text-decoration:none;border-radius:999px;padding:14px 20px;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.25)}
 .hero{min-height:88vh;display:grid;grid-template-columns:1fr 1fr;background:var(--panel)}
@@ -22,6 +23,7 @@ main{width:min(1100px,calc(100% - 34px));margin:48px auto}
 section{background:rgba(255,247,237,.86);border:1px solid #dacdbc;border-radius:28px;padding:clamp(26px,4vw,54px);margin-bottom:28px;box-shadow:0 15px 40px rgba(80,60,40,.08)}
 .liveBox{background:#fffaf3;border:3px solid var(--accent);text-align:center}
 .liveBox h2{color:var(--accent)}
+.liveDate{font-weight:800;color:var(--accent);font-size:22px;margin:14px 0}
 .liveBtn{display:inline-block;margin-top:18px;background:var(--accent);color:white;text-decoration:none;border-radius:999px;padding:16px 26px;font-weight:800;box-shadow:0 10px 25px rgba(123,92,61,.25)}
 h2{margin:0 0 22px;font-weight:300;font-size:clamp(34px,5vw,54px);text-align:center}
 .story{max-width:780px;margin:auto;text-align:center;line-height:1.75;font-size:20px}
@@ -36,8 +38,8 @@ footer{text-align:center;padding:42px 18px 80px;color:#5f5a55;font-size:18px}
 </style>
 </head>
 <body>
-<a class="liveFixed" href="https://rouwcentrumvandamme.livestream.fdesigner.eu/login/Carlos1948" target="_blank" rel="noopener">🕯️ Live plechtigheid volgen</a>
-<div class="lang"><button id="nl" class="active" onclick="setLang('nl')">NL</button><button id="es" onclick="setLang('es')">ES</button></div>
+<a class="liveFixed" href="https://rouwcentrumvandamme.livestream.fdesigner.eu/login/Carlos1948" target="_blank" rel="noopener" data-nl="🕯️ Live plechtigheid volgen" data-es="🕯️ Ver transmisión en vivo">🕯️ Live plechtigheid volgen</a>
+<div class="lang"><span class="flags">🇧🇪 🇨🇱</span><button id="nl" class="active" onclick="setLang('nl')">NL</button><button id="es" onclick="setLang('es')">ES</button></div>
 
 <header class="hero">
   <div class="heroPhoto"></div>
@@ -47,7 +49,8 @@ footer{text-align:center;padding:42px 18px 80px;color:#5f5a55;font-size:18px}
 <main>
 <section class="liveBox">
   <h2 data-nl="Uitvaartplechtigheid live volgen" data-es="Seguir la ceremonia en directo"></h2>
-  <p class="story" data-nl="Voor familie en vrienden die niet aanwezig kunnen zijn, kan de plechtigheid live gevolgd worden via onderstaande knop." data-es="Para la familia y amigos que no puedan estar presentes, la ceremonia se puede seguir en directo con el botón de abajo."></p>
+  <p class="liveDate" data-nl="Vrijdag 26 juni 2026 – 09:45 uur" data-es="Viernes 26 de junio de 2026 – 09:45 horas"></p>
+  <p class="story" data-nl="Voor familie en vrienden die niet aanwezig kunnen zijn, kan de plechtigheid live gevolgd worden via onderstaande knop." data-es="Para familiares y amigos que no puedan estar presentes, la ceremonia se puede seguir en directo con el botón de abajo."></p>
   <a class="liveBtn" href="https://rouwcentrumvandamme.livestream.fdesigner.eu/login/Carlos1948" target="_blank" rel="noopener" data-nl="🕯️ Open livestream" data-es="🕯️ Abrir transmisión en vivo"></a>
 </section>
 
