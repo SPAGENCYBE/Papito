@@ -25,3 +25,19 @@ Functies:
 - backup downloaden
 - fotopagina blijft werken
 - livestream NL/ES blijft werken
+
+
+
+EmailJS toegevoegd:
+- Service ID: service_x1wh7b8
+- Template ID: template_a1becoi
+- Public Key: GZ26ksQVkIaUV3FMg
+
+Bij elke nieuwe herinnering probeert de website automatisch een mail te sturen via EmailJS.
+Template-velden:
+- {{from_name}}
+- {{relation}}
+- {{message}}
+- {{language}}
+- {{date}}
+- {{photo_url}}
