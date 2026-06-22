@@ -1,21 +1,16 @@
-Papito website - herstelde versie
+Papito website - enkel de nieuwe foto's
 
-Basis: Papito_website_met_fotopagina.zip
+Deze ZIP gebruikt enkel de foto's uit gallery.zip voor:
+- de fotopagina fotos.html
+- de preview 'Momenten' op de homepage
 
-Bevat:
-- Homepagina met bestaande teksten
-- Livestreamknop Nederlands/Spaans
-- Aparte fotopagina: fotos.html
-- Klik op foto's om ze groter te bekijken
-- Pijltjes vorige/volgende
-- Verborgen admin
-- Herinneringen verwijderen via admin
-- Foto's downloaden via admin
+Aantal foto's verwerkt: 27
 
-Niet inbegrepen:
-- Tijdlijn
-- Kaarsjes
-- Zichtbare Firebase-placeholder teksten
+Upload:
+1. Pak deze ZIP uit.
+2. Vervang alle bestanden in je GitHub repository Papito.
+3. Commit + push.
+4. Open: https://spagencybe.github.io/Papito/
 
 Admin:
 https://spagencybe.github.io/Papito/?admin=1
