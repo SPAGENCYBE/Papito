@@ -5,295 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Carlos Aránguiz · 1948–2026</title>
 <style>
-:root{
-  --bg:#eee0cf;
-  --panel:#fff7ed;
-  --ink:#343137;
-  --soft:#8f9583;
-  --line:#b8b1a7;
-  --muted:#746e69;
-}
+:root{--bg:#eee0cf;--panel:#fff7ed;--ink:#343137;--soft:#8f9583;--line:#b8b1a7;--muted:#746e69}
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-}
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:url("assets/texture.png") center/cover no-repeat;
-  opacity:.08;
-  pointer-events:none;
-}
-.lang{
-  position:fixed;
-  right:18px;
-  top:18px;
-  z-index:10;
-  background:rgba(255,247,237,.9);
-  border:1px solid #d5c7b8;
-  border-radius:999px;
-  padding:6px;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-.lang button{
-  border:0;
-  background:transparent;
-  padding:9px 13px;
-  border-radius:999px;
-  font-weight:700;
-  cursor:pointer;
-}
-.lang button.active{background:var(--ink);color:white}
-.hero{
-  min-height:88vh;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:0;
-  background:var(--panel);
-}
-.heroPhoto{
-  background:url("assets/hero.jpg") center/cover no-repeat;
-  min-height:420px;
-}
-.heroText{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:56px 34px;
-  position:relative;
-}
-.frame{
-  width:min(620px,100%);
-  min-height:520px;
-  border:4px solid var(--line);
-  border-left-color:transparent;
-  border-right-color:transparent;
-  border-radius:28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:38px 28px;
-  position:relative;
-}
-.leaf{color:var(--soft);font-size:60px;letter-spacing:-8px;margin-bottom:18px}
-.kicker{font-size:18px;line-height:1.35;color:#4b4748;margin-bottom:20px}
-h1{
-  margin:0;
-  font-weight:300;
-  font-size:clamp(54px,8vw,98px);
-  line-height:1;
-}
-.years{font-size:30px;margin:18px 0 28px;color:#625b5a}
-.quote{font-size:22px;line-height:1.5;max-width:480px}
-main{
-  width:min(1100px,calc(100% - 34px));
-  margin:48px auto;
-}
-section{
-  background:rgba(255,247,237,.86);
-  border:1px solid #dacdbc;
-  border-radius:28px;
-  padding:clamp(26px,4vw,54px);
-  margin-bottom:28px;
-  box-shadow:0 15px 40px rgba(80,60,40,.08);
-}
-h2{
-  margin:0 0 22px;
-  font-weight:300;
-  font-size:clamp(34px,5vw,54px);
-  text-align:center;
-}
-.story{
-  max-width:780px;
-  margin:auto;
-  text-align:center;
-  line-height:1.75;
-  font-size:20px;
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-}
-.gallery img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  background:#fff;
-  border:9px solid white;
-  box-shadow:0 8px 22px rgba(0,0,0,.12);
-}
-.gallery img.big{grid-column:span 2}
-.formWrap{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:32px;
-}
-label{display:block;margin:14px 0 7px;font-weight:700}
-input, textarea, select{
-  width:100%;
-  padding:14px 15px;
-  border-radius:14px;
-  border:1px solid #d2c3b2;
-  background:#fffdf8;
-  color:var(--ink);
-  font:inherit;
-}
-textarea{min-height:150px;resize:vertical}
-button.submit{
-  margin-top:18px;
-  background:var(--ink);
-  color:white;
-  border:0;
-  border-radius:999px;
-  padding:14px 22px;
-  font-weight:700;
-  cursor:pointer;
-}
-.info{color:var(--muted);line-height:1.6}
-.wall{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-.card{
-  background:#fffdf8;
-  border-radius:20px;
-  padding:20px;
-  border-left:5px solid var(--soft);
-}
-.card .meta{color:var(--muted);font-size:14px;margin:6px 0 12px}
-.card img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;margin-top:12px}
-footer{
-  text-align:center;
-  padding:42px 18px 60px;
-  color:#5f5a55;
-  font-size:18px;
-}
-@media(max-width:850px){
-  .hero{grid-template-columns:1fr}
-  .heroPhoto{min-height:52vh}
-  .frame{min-height:auto}
-  .gallery{grid-template-columns:1fr}
-  .gallery img,.gallery img.big{grid-column:auto;height:auto}
-  .formWrap,.wall{grid-template-columns:1fr}
-  .lang{top:auto;bottom:16px}
-}
+body{margin:0;font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg)}
+body:before{content:"";position:fixed;inset:0;background:url("assets/texture.png") center/cover no-repeat;opacity:.08;pointer-events:none}
+.lang{position:fixed;right:18px;top:18px;z-index:10;background:rgba(255,247,237,.9);border:1px solid #d5c7b8;border-radius:999px;padding:6px;box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.lang button{border:0;background:transparent;padding:9px 13px;border-radius:999px;font-weight:700;cursor:pointer}.lang button.active{background:var(--ink);color:white}
+.hero{min-height:88vh;display:grid;grid-template-columns:1fr 1fr;background:var(--panel)}
+.heroPhoto{background:url("assets/hero.jpg") center/cover no-repeat;min-height:420px}
+.heroText{display:flex;align-items:center;justify-content:center;padding:56px 34px}
+.frame{width:min(620px,100%);min-height:520px;border:4px solid var(--line);border-left-color:transparent;border-right-color:transparent;border-radius:28px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:38px 28px}
+.leaf{color:var(--soft);font-size:60px;letter-spacing:-8px;margin-bottom:18px}.kicker{font-size:18px;color:#4b4748;margin-bottom:20px}
+h1{margin:0;font-weight:300;font-size:clamp(54px,8vw,98px);line-height:1}.years{font-size:30px;margin:18px 0 28px;color:#625b5a}.quote{font-size:22px;line-height:1.5;max-width:480px}
+main{width:min(1100px,calc(100% - 34px));margin:48px auto}
+section{background:rgba(255,247,237,.86);border:1px solid #dacdbc;border-radius:28px;padding:clamp(26px,4vw,54px);margin-bottom:28px;box-shadow:0 15px 40px rgba(80,60,40,.08)}
+h2{margin:0 0 22px;font-weight:300;font-size:clamp(34px,5vw,54px);text-align:center}
+.story{max-width:780px;margin:auto;text-align:center;line-height:1.75;font-size:20px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.gallery img{width:100%;height:260px;object-fit:cover;background:#fff;border:9px solid white;box-shadow:0 8px 22px rgba(0,0,0,.12)}.gallery img.big{grid-column:span 2}
+.formWrap{display:grid;grid-template-columns:1fr 1fr;gap:32px}label{display:block;margin:14px 0 7px;font-weight:700}
+input,textarea,select{width:100%;padding:14px 15px;border-radius:14px;border:1px solid #d2c3b2;background:#fffdf8;color:var(--ink);font:inherit}textarea{min-height:150px;resize:vertical}
+button.submit{margin-top:18px;background:var(--ink);color:white;border:0;border-radius:999px;padding:14px 22px;font-weight:700;cursor:pointer}.info{color:var(--muted);line-height:1.6}
+.wall{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:#fffdf8;border-radius:20px;padding:20px;border-left:5px solid var(--soft)}.card .meta{color:var(--muted);font-size:14px;margin:6px 0 12px}.card img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;margin-top:12px}
+.adminActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.adminActions button{border:0;border-radius:999px;padding:9px 13px;cursor:pointer;background:#343137;color:white;font-weight:700}
+footer{text-align:center;padding:42px 18px 60px;color:#5f5a55;font-size:18px}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.heroPhoto{min-height:52vh}.frame{min-height:auto}.gallery{grid-template-columns:1fr}.gallery img,.gallery img.big{grid-column:auto;height:auto}.formWrap,.wall{grid-template-columns:1fr}.lang{top:auto;bottom:16px}}
 </style>
 </head>
 <body>
-<div class="lang">
-  <button id="nl" class="active" onclick="setLang('nl')">NL</button>
-  <button id="es" onclick="setLang('es')">ES</button>
-</div>
-
-<header class="hero">
-  <div class="heroPhoto"></div>
-  <div class="heroText">
-    <div class="frame">
-      <div class="leaf">‹‹‹</div>
-      <div class="kicker" data-nl="Voor altijd in onze harten" data-es="Para siempre en nuestros corazones"></div>
-      <h1>Carlos</h1>
-      <div class="years">1948 – 2026</div>
-      <div class="quote" data-nl="Een plek om herinneringen, foto’s en liefde achter te laten voor Papi." data-es="Un lugar para dejar recuerdos, fotos y amor para Papi."></div>
-    </div>
-  </div>
-</header>
-
+<div class="lang"><button id="nl" class="active" onclick="setLang('nl')">NL</button><button id="es" onclick="setLang('es')">ES</button></div>
+<header class="hero"><div class="heroPhoto"></div><div class="heroText"><div class="frame"><div class="leaf">‹‹‹</div><div class="kicker" data-nl="Voor altijd in onze harten" data-es="Para siempre en nuestros corazones"></div><h1>Carlos</h1><div class="years">1948 – 2026</div><div class="quote" data-nl="Een plek om herinneringen, foto’s en liefde achter te laten voor Papi." data-es="Un lugar para dejar recuerdos, fotos y amor para Papi."></div></div></div></header>
 <main>
-  <section>
-    <h2 data-nl="Carlos Aránguiz" data-es="Carlos Aránguiz"></h2>
-    <p class="story" data-nl="Hij was een goede, genereuze man, altijd bereid anderen te helpen. Zijn grootste geluk was de familie rond de tafel samenbrengen, zijn maaltijden, zijn verhalen en zijn onvoorwaardelijke liefde delen. Voor zijn kleinkinderen was hij eenvoudigweg Papi." data-es="Fue un hombre bueno, generoso y siempre dispuesto a ayudar a los demás. Su mayor felicidad era reunir a la familia alrededor de una mesa, compartiendo sus comidas, sus historias y su cariño incondicional. Para sus nietos era simplemente Papi."></p>
-  </section>
-
-  <section>
-    <h2 data-nl="Momenten" data-es="Momentos"></h2>
-    <div class="gallery">
-      <img class="big" src="assets/fish.jpg" alt="">
-      <img src="assets/hands.jpg" alt="">
-      <img src="assets/garden.jpg" alt="">
-      <img src="assets/fishing.jpg" alt="">
-      <img class="big" src="assets/hero.jpg" alt="">
-    </div>
-  </section>
-
-  <section>
-    <h2 data-nl="Laat een herinnering achter" data-es="Deja un recuerdo"></h2>
-    <div class="formWrap">
-      <form id="form">
-        <label data-nl="Naam" data-es="Nombre"></label>
-        <input name="name" required>
-        <label data-nl="Relatie met Papi" data-es="Relación con Papi"></label>
-        <input name="relation">
-        <label data-nl="Taal" data-es="Idioma"></label>
-        <select name="language"><option>Nederlands</option><option>Español</option></select>
-        <label data-nl="Tekst" data-es="Mensaje"></label>
-        <textarea name="text" required></textarea>
-        <label data-nl="Foto toevoegen" data-es="Añadir foto"></label>
-        <input type="file" name="photo" accept="image/*">
-        <button class="submit" data-nl="Plaats herinnering ❤️" data-es="Publicar recuerdo ❤️"></button>
-      </form>
-      <div class="info">
-        <p data-nl="Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen." data-es="Familia, amigos y conocidos pueden compartir aquí un mensaje o una foto."></p>
-        <p data-nl="Deze versie is lokaal. Voor echte online uploads moet de website gekoppeld worden aan Firebase of een backend." data-es="Esta versión es local. Para subidas reales online, la web debe conectarse a Firebase o a un backend."></p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 data-nl="Herinneringenmuur" data-es="Muro de recuerdos"></h2>
-    <div id="wall" class="wall"></div>
-  </section>
+<section><h2 data-nl="Carlos Aránguiz" data-es="Carlos Aránguiz"></h2><p class="story" data-nl="Hij was een goede, genereuze man, altijd bereid anderen te helpen. Zijn grootste geluk was de familie rond de tafel samenbrengen, zijn maaltijden, zijn verhalen en zijn onvoorwaardelijke liefde delen. Voor zijn kleinkinderen was hij eenvoudigweg Papi." data-es="Fue un hombre bueno, generoso y siempre dispuesto a ayudar a los demás. Su mayor felicidad era reunir a la familia alrededor de una mesa, compartiendo sus comidas, sus historias y su cariño incondicional. Para sus nietos era simplemente Papi."></p></section>
+<section><h2 data-nl="Momenten" data-es="Momentos"></h2><div class="gallery"><img class="big" src="assets/fish.jpg"><img src="assets/hands.jpg"><img src="assets/garden.jpg"><img src="assets/fishing.jpg"><img class="big" src="assets/hero.jpg"></div></section>
+<section><h2 data-nl="Laat een herinnering achter" data-es="Deja un recuerdo"></h2><div class="formWrap"><form id="form"><label data-nl="Naam" data-es="Nombre"></label><input name="name" required><label data-nl="Relatie met Papi" data-es="Relación con Papi"></label><input name="relation"><label data-nl="Taal" data-es="Idioma"></label><select name="language"><option>Nederlands</option><option>Español</option></select><label data-nl="Tekst" data-es="Mensaje"></label><textarea name="text" required></textarea><label data-nl="Foto toevoegen" data-es="Añadir foto"></label><input type="file" name="photo" accept="image/*"><button class="submit" data-nl="Plaats herinnering ❤️" data-es="Publicar recuerdo ❤️"></button></form><div class="info"><p data-nl="Familie, vrienden en kennissen kunnen hier een mooie tekst of foto delen." data-es="Familia, amigos y conocidos pueden compartir aquí un mensaje o una foto."></p><p data-nl="Deze versie is lokaal. Voor echte online uploads moet de website gekoppeld worden aan Firebase of een backend." data-es="Esta versión es local. Para subidas reales online, la web debe conectarse a Firebase o a un backend."></p></div></div></section>
+<section><h2 data-nl="Herinneringenmuur" data-es="Muro de recuerdos"></h2><div id="wall" class="wall"></div></section>
+<section id="adminPanel" style="display:none"><h2>Verborgen admin</h2><p class="info">Hier kan je herinneringen verwijderen, foto’s apart downloaden en een backup exporteren.</p><button class="submit" type="button" onclick="downloadAllData()">Backup downloaden</button> <button class="submit" type="button" onclick="clearAllMemories()">Alle herinneringen verwijderen</button> <button class="submit" type="button" onclick="exitAdmin()">Admin sluiten</button></section>
 </main>
-
-<footer>
-  <p>Hasta siempre, Papi ❤️</p>
-  <p data-nl="Vier plaatsen, één verhaal, één hart, één familie." data-es="Cuatro lugares, una historia, un corazón, una familia."></p>
-</footer>
-
+<footer><p>Hasta siempre, Papi ❤️</p><p data-nl="Vier plaatsen, één verhaal, één hart, één familie." data-es="Cuatro lugares, una historia, un corazón, una familia."></p></footer>
 <script>
-let currentLang='nl';
-function setLang(lang){
-  currentLang=lang;
-  document.documentElement.lang=lang;
-  document.getElementById('nl').classList.toggle('active',lang==='nl');
-  document.getElementById('es').classList.toggle('active',lang==='es');
-  document.querySelectorAll('[data-nl]').forEach(el=>el.textContent=el.dataset[lang]);
-  localStorage.setItem('site_lang',lang);
-}
+let currentLang='nl'; const ADMIN_CODE='papi1948';
+function setLang(lang){currentLang=lang;document.documentElement.lang=lang;document.getElementById('nl').classList.toggle('active',lang==='nl');document.getElementById('es').classList.toggle('active',lang==='es');document.querySelectorAll('[data-nl]').forEach(el=>el.textContent=el.dataset[lang]);localStorage.setItem('site_lang',lang)}
 function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
-function render(){
-  const data=JSON.parse(localStorage.getItem('memories')||'[]');
-  const starters=[
-    {name:'Familie',relation:'Voor Papi',language:'Nederlands',text:'Deze plek is gemaakt zodat iedereen een mooie herinnering aan Papi kan achterlaten.',date:new Date().toLocaleDateString('nl-BE')},
-    {name:'Familia',relation:'Para Papi',language:'Español',text:'Este lugar fue creado para que todos puedan dejar un hermoso recuerdo para Papi.',date:new Date().toLocaleDateString('es-ES')}
-  ];
-  wall.innerHTML='';
-  data.concat(starters).forEach(m=>{
-    const div=document.createElement('div');
-    div.className='card';
-    div.innerHTML='<strong>'+esc(m.name)+'</strong><div class="meta">'+esc(m.relation)+' · '+esc(m.language)+' · '+esc(m.date)+'</div><p>'+esc(m.text).replace(/\\n/g,'<br>')+'</p>'+(m.photo?'<img src="'+m.photo+'">':'');
-    wall.appendChild(div);
-  });
-}
-function fileToDataURL(file){return new Promise(res=>{if(!file)return res('');const r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(file);});}
-form.addEventListener('submit',async e=>{
-  e.preventDefault();
-  const f=e.target;
-  const data=JSON.parse(localStorage.getItem('memories')||'[]');
-  data.unshift({name:f.name.value,relation:f.relation.value,language:f.language.value,text:f.text.value,photo:await fileToDataURL(f.photo.files[0]),date:new Date().toLocaleDateString(currentLang==='nl'?'nl-BE':'es-ES')});
-  localStorage.setItem('memories',JSON.stringify(data));
-  f.reset();
-  render();
-});
-setLang(localStorage.getItem('site_lang')||'nl');
-render();
+function getData(){return JSON.parse(localStorage.getItem('memories')||'[]')} function saveData(d){localStorage.setItem('memories',JSON.stringify(d))}
+function isAdmin(){return sessionStorage.getItem('papi_admin')==='yes'}
+function enterAdmin(){const code=prompt(currentLang==='nl'?'Admin code:':'Código admin:'); if(code===ADMIN_CODE){sessionStorage.setItem('papi_admin','yes');adminPanel.style.display='block';render()} else if(code!==null){alert(currentLang==='nl'?'Verkeerde code.':'Código incorrecto.')}}
+function exitAdmin(){sessionStorage.removeItem('papi_admin');adminPanel.style.display='none';render()}
+function deleteMemory(i){if(!isAdmin())return; if(confirm(currentLang==='nl'?'Deze herinnering verwijderen?':'¿Eliminar este recuerdo?')){const d=getData();d.splice(i,1);saveData(d);render()}}
+function downloadPhoto(i){const m=getData()[i]; if(!m||!m.photo)return; const a=document.createElement('a'); a.href=m.photo; a.download='foto-herinnering-papi-'+(i+1)+'.jpg'; a.click()}
+function downloadAllData(){const blob=new Blob([JSON.stringify(getData(),null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='herinneringen-papi-backup.json'; a.click(); URL.revokeObjectURL(a.href)}
+function clearAllMemories(){if(!isAdmin())return; if(confirm(currentLang==='nl'?'Alles verwijderen? Dit kan niet ongedaan gemaakt worden.':'¿Eliminar todo? No se puede deshacer.')){saveData([]);render()}}
+function render(){const data=getData(); const starters=[{name:'Familie',relation:'Voor Papi',language:'Nederlands',text:'Deze plek is gemaakt zodat iedereen een mooie herinnering aan Papi kan achterlaten.',date:new Date().toLocaleDateString('nl-BE')},{name:'Familia',relation:'Para Papi',language:'Español',text:'Este lugar fue creado para que todos puedan dejar un hermoso recuerdo para Papi.',date:new Date().toLocaleDateString('es-ES')}]; wall.innerHTML=''; data.forEach((m,i)=>{const div=document.createElement('div');div.className='card';div.innerHTML='<strong>'+esc(m.name)+'</strong><div class="meta">'+esc(m.relation)+' · '+esc(m.language)+' · '+esc(m.date)+'</div><p>'+esc(m.text).replace(/\\n/g,'<br>')+'</p>'+(m.photo?'<img src="'+m.photo+'">':'')+(isAdmin()?'<div class="adminActions">'+(m.photo?'<button type="button" onclick="downloadPhoto('+i+')">Foto downloaden</button>':'')+'<button type="button" onclick="deleteMemory('+i+')">Verwijderen</button></div>':'');wall.appendChild(div)}); starters.forEach(m=>{const div=document.createElement('div');div.className='card';div.innerHTML='<strong>'+esc(m.name)+'</strong><div class="meta">'+esc(m.relation)+' · '+esc(m.language)+' · '+esc(m.date)+'</div><p>'+esc(m.text)+'</p>';wall.appendChild(div)})}
+function fileToDataURL(file){return new Promise(res=>{if(!file)return res('');const r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(file)})}
+form.addEventListener('submit',async e=>{e.preventDefault();const f=e.target;const d=getData();d.unshift({name:f.name.value,relation:f.relation.value,language:f.language.value,text:f.text.value,photo:await fileToDataURL(f.photo.files[0]),date:new Date().toLocaleDateString(currentLang==='nl'?'nl-BE':'es-ES')});saveData(d);f.reset();render()})
+setLang(localStorage.getItem('site_lang')||'nl'); render(); if(new URLSearchParams(location.search).get('admin')==='1') setTimeout(enterAdmin,300); document.addEventListener('keydown',e=>{if(e.ctrlKey&&e.altKey&&e.key.toLowerCase()==='p')enterAdmin()});
 </script>
-</body>
-</html>
+</body></html>

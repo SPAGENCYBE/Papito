@@ -1,14 +1,17 @@
-Schone herinneringswebsite voor Carlos Aránguiz.
+Admin-versie herinneringswebsite Carlos Aránguiz
 
-Open index.html om te bekijken.
+Open index.html.
 
-Deze versie is netjes en rustig in de stijl van de rouwbrief:
-- beige achtergrond
-- duidelijke cover
-- Nederlands/Spaans
-- fotogalerij
-- formulier voor tekst + foto
-- herinneringenmuur
+Verborgen admin:
+- Ga naar index.html?admin=1
+- Of druk CTRL + ALT + P
+- Admin code: papi1948
 
-Belangrijk:
-De upload werkt lokaal in de browser. Voor echte online uploads voor iedereen moet dit gekoppeld worden aan Firebase, Supabase of een backend.
+Admin functies:
+- Herinneringen verwijderen
+- Foto's apart downloaden
+- Backup downloaden
+- Alles wissen
+
+Let op:
+Deze versie werkt lokaal in de browser. Voor een echte publieke website met centrale admin moet dit gekoppeld worden aan Firebase/Supabase of een backend met login.
