@@ -20,34 +20,12 @@ Je logt dan in met:
 carlos.van.nieuwenborgh@gmail.com
 + je zelf gekozen wachtwoord
 
-<<<<<<< HEAD
 Waarom:
 In de vorige versie stonden update/delete open in Firebase Rules.
 Daardoor kon iemand technisch gezien verwijderen.
 Deze versie sluit dat af.
-=======
-Functies:
-- bezoekers plaatsen tekst + foto
-- bericht verschijnt pas na goedkeuring
-- admin kan goedkeuren/verwijderen
-- admin kan foto downloaden
-- backup downloaden
-- fotopagina blijft werken
-- livestream NL/ES blijft werken
 
 
-
-EmailJS toegevoegd:
-- Service ID: service_x1wh7b8
-- Template ID: template_a1becoi
-- Public Key: GZ26ksQVkIaUV3FMg
-
-Bij elke nieuwe herinnering probeert de website automatisch een mail te sturen via EmailJS.
-Template-velden:
-- {{from_name}}
-- {{relation}}
-- {{message}}
-- {{language}}
-- {{date}}
-- {{photo_url}}
->>>>>>> 7b651007c95b418f4505db64814f8280da2c8154
+FIX:
+Deze versie zet alle Nederlandse teksten ook rechtstreeks in de HTML.
+Daardoor verdwijnen titels/teksten niet meer als Firebase of JavaScript even traag laadt of blokkeert.
