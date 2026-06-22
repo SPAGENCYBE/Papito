@@ -1,17 +1,20 @@
-Admin-versie herinneringswebsite Carlos Aránguiz
+Papito website - klaar voor GitHub Pages
 
-Open index.html.
+Wat is toegevoegd:
+- Livestream duidelijk bovenaan
+- Vaste knop 'Live plechtigheid volgen'
+- Admin via ?admin=1
+- Code: papi1948
 
-Verborgen admin:
-- Ga naar index.html?admin=1
-- Of druk CTRL + ALT + P
-- Admin code: papi1948
+Upload naar GitHub:
+1. Pak deze ZIP uit.
+2. Vervang de bestanden in je repository Papito.
+3. Commit + push.
+4. Wacht 1-2 minuten.
+5. Open: https://spagencybe.github.io/Papito/
 
-Admin functies:
-- Herinneringen verwijderen
-- Foto's apart downloaden
-- Backup downloaden
-- Alles wissen
+Admin:
+https://spagencybe.github.io/Papito/?admin=1
 
 Let op:
-Deze versie werkt lokaal in de browser. Voor een echte publieke website met centrale admin moet dit gekoppeld worden aan Firebase/Supabase of een backend met login.
+Deze versie bewaart herinneringen lokaal in de browser. Voor publieke gedeelde berichten/foto's is Firebase nodig.
