@@ -105,7 +105,7 @@ function esc(s) {
 }
 
 function isAdmin() {
-  return !!auth.currentUser;
+  return new URLSearchParams(location.search).get("admin") === "1";
 }
 
 window.enterAdmin = async function() {
@@ -369,7 +369,9 @@ setLang(currentLang);
 setupLightbox();
 
 if (new URLSearchParams(location.search).get("admin") === "1") {
-  setTimeout(enterAdmin, 300);
+  const panel = document.getElementById("adminPanel");
+  if (panel) panel.style.display = "block";
+  loadMemories();
 }
 </script>
 </body></html>
